@@ -25,7 +25,7 @@ const append = (message, position) => {
 };
 
 // set up the client connection to receive the updates
-var socket = io("https://chatwithstrangers0.herokuapp.com");
+var socket = io("https://chatwithstrangers0.herokuapp.com/socket.io/socket.io.js");
 
 socket.emit("new-connection", userName);
 
