@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:rgb(161, 200, 224);
+    height: 100vh;
+}
+
+.headcont{
+    background:rgb(22, 117, 175);
+    max-width: 60vw;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Metal Mania', cursive;
+
+    
+}
+
+.mainHeading{
+    font-size: 2rem;
+}
+
+.btn{
+    float: right;
+    display: inline-block;
+    margin-top: 1.4em;
+    text-decoration: none;
+    background: rgb(161, 200, 224);
+    outline: none;
+    width: 13%;
+    padding: 0.1em;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    border-style: dotted;
+    text-align: center;
+}
+
+.btn:hover{
+    background: rgb(29, 161, 242);;
+    color: black;
+}
+
+.chat-messages-container{
+    max-width: 60vw;
+    background: white;
+    height: 70vh;
+    margin: auto;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.message{
+    background: rgb(29, 161, 242);
+    width: 30%;
+    overflow: hidden;
+    padding: 3px 11px;
+    margin-bottom: 15px;
+    margin-left: 1px;
+    margin-top: 2px;
+    margin-right: 1px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.4);
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.right{
+    float: right;
+    clear: both;
+}
+.left{
+   float: left;
+   clear: both;
+}
+
+.chat-form-container{
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+    height: auto;
+}
+.usermsg{
+    width: 90%;
+    font: message-box;
+    border: 2px dotted rgb(29, 161, 242);
+    outline: none;
+    display: inline-block;
+    padding: 14px
+}
+
+.sendBtn{
+    background:rgb(22, 117, 175) ;
+    outline: none;
+    display: inline;
+    padding: 14px;
+    cursor: pointer;
+    width: 52px;
+    border-radius: 10px;
+
+}
+
+.sendBtn:hover{
+    background: white;
+    color: rgb(22, 117, 175);
+}
+
+
+/* Media queries  */
+
+@media(max-width:1170px){
+    /* going upto dowm  */
+    .btn{
+        width: 21%;
+        overflow: hidden;
+
+    }
+
+    .mainHeading{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:930px){
+    .message{
+        width: 35%;
+    }
+}
+
+
+@media(max-width:730px){
+    .btn{
+        width: 27%;
+    }
+    .usermsg{
+        width: 81%;
+    }
+
+    .message{
+        width: 40%;
+    }
+    
+   
+}
+
+@media(max-width:576px){
+    .mainHeading{
+        font-size: 1.3rem;
+    }
+}
+
+@media(max-width:492px){
+    .btn{
+        width:29% ;
+    }
+    .usermsg{
+        width: 76%;
+    }
+    .message{
+        width: 45%;
+    }
+    .headcont{
+        max-width: 85vw;
+    }
+    .chat-messages-container{
+        max-width: 85vw;
+    }
+
+    .chat-form-container{
+        width: 90vw;
+    }
+}
+
+@media(max-width:392px){
+    .usermsg{
+        width: 67%;
+    }
+
+    .btn{
+        width: 50%;
+    }
+
+    .message{
+        width: 48%;
+    }
+  
+}
+
+@media(max-width:270px){
+    .headcont{
+       max-width: 95vw;
+    }
+
+    .chat-messages-container{
+        max-width: 95vw;
+    }
+
+    .chat-form-container{
+        width: 100vw;
+    }
+}
+
+/* // Creating Dark Mode theme  */
+
+.dark-mode-bodyCol{
+    background: black;
+    color: white;
+}
+
+.dark-mode-Msg{
+    /* background-color: black; */
+     box-shadow: 0px 7px 6px 0px rgb(235, 229, 229);
+     
+}
+
+.chat-messages-container-dark{
+    background: rgb(39, 38, 38);
+}
+
+
+/* //  switch For Dark Mode */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    float: right;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  

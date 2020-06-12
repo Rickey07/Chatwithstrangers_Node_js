@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Strange Chat App </title>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <script defer src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="stylesheet" href="./css/chat.css">
+    <script defer src="http://chatwithstrangers0.herokuapp.com/socket.io/socket.io.js"></script>
+
+</head>
+<body>
+    <div class="chat-container">
+        <header class="headcont">
+            <p class="typing" style="text-align: center;margin-top: 15px;"></p>
+            <!-- Dark Mode switch  -->
+            <label class="switch" >
+                <input type="checkbox" class="btn" >
+                <span class="slider round"></span>
+              </label>
+            <!-- <a  class="btn">Dark Mode</a> -->
+        <h1 class="mainHeading"> <i class="fas fa-theater-masks fa-2x"></i>StrangeChat</h1>
+        </header>
+        <div class="chat-messages-container">
+        </div>
+        <div class="chat-form-container">
+            <form action="" class="chat-form">
+                <input type="text" class="usermsg" placeholder="Enter Your Message" autocomplete="off" required>
+                <button class="sendBtn" type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+    <script defer src="./js/client.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js" integrity="sha256-+Q/z/qVOexByW1Wpv81lTLvntnZQVYppIL1lBdhtIq0=" crossorigin="anonymous"></script>
+</body>
+</html>
